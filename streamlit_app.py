@@ -67,7 +67,8 @@ for key, series in series_dict.items():
     # Apply moving average filter
     smoothed_series = moving_average(series, window_size)
     
-    # Plot the original and smoothed series
+    st.header("Γραφική παράσταση χρονοσειράς με"
+    # Plot the original and smoothed series(achieved with moving aberage)
     fig, ax = plt.subplots()
     ax.plot(range(num_points), series, label="Original Series")
     ax.plot(range(window_size-1, num_points), smoothed_series, label="Smoothed Series", color='orange')
